@@ -93,11 +93,12 @@ import static com.yupi.usercenter.contant.UserConstant.USER_LOGIN_STATE;
         //      账户不能重复
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("userAccount",userAccount);
-        queryWrapper.eq("userPassword",encryptPassword);
+        queryWrapper.eq("userPassword",userPassword);
         User user = userMapper.selectOne(queryWrapper);
 //        账户不存在
         if( user == null ){
             log.info("user login failed,userAccount cannot match userPassword");
+            log.info(userPassword);
             return null;
         }
 //        用户脱敏
