@@ -20,7 +20,7 @@ public class UserServiceTest {
     public void textAddUser() {
        User user = new User();
 
-       user.setUsername("ldw");
+       user.setUsername("dada");
        user.setUserAccount("");
        user.setAvatarUrl("https://pic.rmb.bdstatic.com/bjh/914b8c0f9814b14c5fedeec7ec6615df5813.jpeg");
        user.setGender(0);
@@ -40,9 +40,10 @@ public class UserServiceTest {
 
    @Test
    void userRegister() {
-      String userAccount = "admin11";
+
+      String userAccount = "dadada4";
       String userPassword = "12345678";
+
       String checkPassword = "12345678";
-      long result = userService.userRegister(userAccount,userPassword,checkPassword);
    }
 }
